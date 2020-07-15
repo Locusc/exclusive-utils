@@ -1,6 +1,6 @@
 const proSettings = {
   navTheme: 'dark',
-  primaryColor: '#1890ff',
+  primaryColor: 'rgb(30, 170, 225)',
   layout: 'top',
   contentWidth: 'Fluid',
   fixedHeader: true,

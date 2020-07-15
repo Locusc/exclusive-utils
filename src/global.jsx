@@ -1,4 +1,5 @@
-import { Button, message, notification } from 'antd';
+import { Button, message, notification,Spin } from 'antd';
+import { LoadingOutlined } from '@ant-design/icons'; 
 import React from 'react';
 import { useIntl } from 'umi';
 import defaultSettings from '../config/defaultSettings';
@@ -99,3 +100,9 @@ if (pwa) {
     });
   }
 }
+
+// 修改全局加载样式
+Spin.setDefaultIndicator(
+  <LoadingOutlined style={{ fontSize: 24 }} spin />
+)
+

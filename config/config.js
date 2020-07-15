@@ -47,7 +47,13 @@ export default defineConfig({
           routes: [
             {
               path: '/',
-              redirect: '/welcome',
+              redirect: '/json-parsing',
+            },
+            {
+              path: '/introduction',
+              name: '简介',
+              icon: 'edit',
+              component: './Introduction',
             },
             {
               path: '/json-parsing',
@@ -74,6 +80,12 @@ export default defineConfig({
                   component: './Welcome',
                 },
               ],
+            },
+            {
+              path: '/common-components',
+              name: '常用组件',
+              icon: 'cloud',
+              component: './CommonComponents',
             },
             {
               name: '测试表格',
