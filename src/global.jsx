@@ -2,7 +2,6 @@ import { Button, message, notification } from 'antd';
 import React from 'react';
 import { useIntl } from 'umi';
 import defaultSettings from '../config/defaultSettings';
-
 const { pwa } = defaultSettings; // if pwa is true
 
 if (pwa) {
@@ -15,7 +14,7 @@ if (pwa) {
     );
   }); // Pop up a prompt on the page asking the user if they want to use the latest version
 
-  window.addEventListener('sw.updated', event => {
+  window.addEventListener('sw.updated', (event) => {
     const e = event;
 
     const reloadSW = async () => {
@@ -30,7 +29,7 @@ if (pwa) {
       await new Promise((resolve, reject) => {
         const channel = new MessageChannel();
 
-        channel.port1.onmessage = msgEvent => {
+        channel.port1.onmessage = (msgEvent) => {
           if (msgEvent.data.error) {
             reject(msgEvent.data.error);
           } else {
@@ -81,20 +80,20 @@ if (pwa) {
   const { serviceWorker } = navigator;
 
   if (serviceWorker.getRegistrations) {
-    serviceWorker.getRegistrations().then(sws => {
-      sws.forEach(sw => {
+    serviceWorker.getRegistrations().then((sws) => {
+      sws.forEach((sw) => {
         sw.unregister();
       });
     });
   }
 
-  serviceWorker.getRegistration().then(sw => {
+  serviceWorker.getRegistration().then((sw) => {
     if (sw) sw.unregister();
   }); // remove all caches
 
   if (window.caches && window.caches.keys) {
-    caches.keys().then(keys => {
-      keys.forEach(key => {
+    caches.keys().then((keys) => {
+      keys.forEach((key) => {
         caches.delete(key);
       });
     });

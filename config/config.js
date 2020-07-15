@@ -14,7 +14,7 @@ export default defineConfig({
     // default zh-CN
     default: 'zh-CN',
     // default true, when it is true, will use `navigator.language` overwrite default
-    antd: true,
+    antd: false,
     baseNavigator: true,
   },
   dynamicImport: {
@@ -50,45 +50,49 @@ export default defineConfig({
               redirect: '/welcome',
             },
             {
-              path: '/welcome',
-              name: 'welcome',
-              icon: 'smile',
-              component: './Welcome',
+              path: '/json-parsing',
+              name: 'JSON解析',
+              icon: 'thunderbolt',
+              component: './JsonParsing',
+            },
+            {
+              path: '/code-comparison',
+              name: '代码对比',
+              icon: 'switcher',
+              component: './CodeComparison',
             },
             {
               path: '/admin',
-              name: 'admin',
-              icon: 'crown',
+              name: '常用函数',
+              icon: 'tool',
               component: './Admin',
-              authority: ['admin'],
               routes: [
                 {
                   path: '/admin/sub-page',
                   name: 'sub-page',
                   icon: 'smile',
                   component: './Welcome',
-                  authority: ['admin'],
                 },
               ],
             },
             {
-              name: 'list.table-list',
+              name: '测试表格',
               icon: 'table',
               path: '/list',
               component: './ListTableList',
             },
             {
-              component: './404',
+              component: './GlobalComponents/404',
             },
           ],
         },
         {
-          component: './404',
+          component: './GlobalComponents/404',
         },
       ],
     },
     {
-      component: './404',
+      component: './GlobalComponents/404',
     },
   ],
   // Theme for antd: https://ant.design/docs/react/customize-theme-cn

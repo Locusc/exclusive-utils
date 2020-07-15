@@ -1,17 +1,17 @@
 const proSettings = {
   navTheme: 'dark',
-  // 拂晓蓝
   primaryColor: '#1890ff',
-  layout: 'side',
+  layout: 'top',
   contentWidth: 'Fluid',
-  fixedHeader: false,
+  fixedHeader: true,
   fixSiderbar: true,
-  colorWeak: false,
   menu: {
     locale: true,
   },
-  title: 'Ant Design Pro',
+  title: 'exclusive-utils',
   pwa: false,
   iconfontUrl: '',
+  splitMenus: false,
+  footerRender: false,
 };
 export default proSettings;
