@@ -12,6 +12,8 @@ import Authorized from '@/utils/Authorized';
 import RightContent from '@/components/GlobalHeader/RightContent';
 import { getAuthorityFromRouter } from '@/utils/utils';
 import logo from '../assets/logo.svg';
+import PageTab from './PageTab';
+
 const noMatch = (
   <Result
     status={403}
@@ -134,7 +136,8 @@ const BasicLayout = (props) => {
       {...settings}
     >
       <Authorized authority={authorized.authority} noMatch={noMatch}>
-        {children}
+        <PageTab>{children}</PageTab>
+        {/* {children} */}
       </Authorized>
     </ProLayout>
   );

@@ -1,8 +1,14 @@
 import React from 'react';
+import { PageHeaderWrapper } from '@ant-design/pro-layout';
+import { Card } from 'antd';
 
 const CodeComparison = () => {
  return (
-   <div>CodeComparison</div>
+   <PageHeaderWrapper>
+     <Card>
+      CodeComparison
+     </Card>
+   </PageHeaderWrapper>
  )
 }
 

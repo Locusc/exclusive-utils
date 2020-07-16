@@ -2,6 +2,7 @@
 import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
+import routes from './routes';
 
 const { REACT_APP_ENV } = process.env;
 export default defineConfig({
@@ -24,89 +25,7 @@ export default defineConfig({
     ie: 11,
   },
   // umi routes: https://umijs.org/docs/routing
-  routes: [
-    {
-      path: '/user',
-      component: '../layouts/UserLayout',
-      routes: [
-        {
-          name: 'login',
-          path: '/user/login',
-          component: './user/login',
-        },
-      ],
-    },
-    {
-      path: '/',
-      component: '../layouts/SecurityLayout',
-      routes: [
-        {
-          path: '/',
-          component: '../layouts/BasicLayout',
-          authority: ['admin', 'user'],
-          routes: [
-            {
-              path: '/',
-              redirect: '/json-parsing',
-            },
-            {
-              path: '/introduction',
-              name: '简介',
-              icon: 'edit',
-              component: './Introduction',
-            },
-            {
-              path: '/json-parsing',
-              name: 'JSON解析',
-              icon: 'thunderbolt',
-              component: './JsonParsing',
-            },
-            {
-              path: '/code-comparison',
-              name: '代码对比',
-              icon: 'switcher',
-              component: './CodeComparison',
-            },
-            {
-              path: '/admin',
-              name: '常用函数',
-              icon: 'tool',
-              component: './Admin',
-              routes: [
-                {
-                  path: '/admin/sub-page',
-                  name: 'sub-page',
-                  icon: 'smile',
-                  component: './Welcome',
-                },
-              ],
-            },
-            {
-              path: '/common-components',
-              name: '常用组件',
-              icon: 'cloud',
-              component: './CommonComponents',
-            },
-            {
-              name: '测试表格',
-              icon: 'table',
-              path: '/list',
-              component: './ListTableList',
-            },
-            {
-              component: './GlobalComponents/404',
-            },
-          ],
-        },
-        {
-          component: './GlobalComponents/404',
-        },
-      ],
-    },
-    {
-      component: './GlobalComponents/404',
-    },
-  ],
+  routes: routes,
   // Theme for antd: https://ant.design/docs/react/customize-theme-cn
   theme: {
     // ...darkTheme,
