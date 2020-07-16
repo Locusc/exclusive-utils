@@ -120,9 +120,7 @@ const menu = obj => {
     </Menu>
   );
 };
-@connect(({ global, tabs }) => ({
-  global, tabs,
-}))
+
 class App extends Component {
   state = { pages: [], keys: {} };
 
@@ -288,4 +286,6 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(({ global, tabs }) => ({
+  global, tabs,
+}))(App);

@@ -1,11 +1,15 @@
 
 import React from 'react';
+import { PageHeaderWrapper } from '@ant-design/pro-layout';
+import { Card } from 'antd';
 
 const CommonComponents = () => {
   return (
-    <div>
+    <Card
+      bordered={false}
+    >
       CommonComponents
-    </div>
+    </Card>
   )
 }
 

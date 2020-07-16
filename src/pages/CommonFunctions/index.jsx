@@ -1,10 +1,16 @@
 import React from 'react';
+import { PageHeaderWrapper } from '@ant-design/pro-layout';
+import { Card } from 'antd';
 
 const CommonFunctions = () => {
   return (
-    <div>
-      CommonFunctions
-    </div>
+    <PageHeaderWrapper
+      breadcrumb={false}
+    >
+      <Card>
+        CommonComponents
+      </Card>
+    </PageHeaderWrapper>
   )
 }
 
