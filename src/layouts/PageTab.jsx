@@ -157,6 +157,8 @@ class App extends Component {
     // 如果是新开标签页，push到tabs标签页数组中，并设置当前激活页面
     if (pathname !== '/' && !pages.some(page => page.key === pathname)) {
       myPage.push({ key: pathname, title: pageName, content: children });
+    } else if(pathname === '/') {
+      history.push('/introduction')
     }
     const keys = {};
     myPage.forEach(item => {
@@ -230,7 +232,7 @@ class App extends Component {
 
   render() {
     const { pages = [], activeKey, keys } = this.state;
-
+    console.log(pages)
     return (
       <div>
         <Tabs
