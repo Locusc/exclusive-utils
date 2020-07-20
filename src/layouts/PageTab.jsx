@@ -138,6 +138,12 @@ class App extends Component {
     if (pathname !== preProps.tabs.pathname) {
       // 当路由发生改变时，显示相应tab页面
       this.getData();
+      // codemirror 好像会丢失一些信息 只要是对比组件先重新挂载
+      if(pathname === '/code-comparison') {
+        const { keys } = this.state;
+        keys[pathname] = Date.now();
+        this.setState({ keys });
+      }
     }
   }
 
@@ -277,7 +283,7 @@ class App extends Component {
                 closable={pages.length > 1}
                 style={{ background: 'transparent', paddingLeft: 0, paddingRight: 0 }}
               >
-                <div key={keys[pane.key]}>{pane.content}</div>
+                <div key={keys[pane.key]} >{pane.content}</div>
               </TabPane>
             );
           })}

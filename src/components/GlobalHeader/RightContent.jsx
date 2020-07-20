@@ -54,7 +54,7 @@ const GlobalHeaderRight = props => {
         </span>
       )}
       <SelectLang className={styles.action} /> */}
-      <a href="https://github.com/Locusc" target="_blank">
+      <a href="https://github.com/Locusc/exclusive-utils" target="_blank">
         <Tooltip title={"Github"}>
           <GithubOutlined className={styles.action} />  
         </Tooltip>

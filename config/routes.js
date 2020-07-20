@@ -50,13 +50,11 @@ export default [
             path: '/admin',
             name: '常用函数',
             icon: 'tool',
-            component: './Admin',
             routes: [
               {
-                path: '/admin/sub-page',
-                name: 'sub-page',
-                icon: 'smile',
-                component: './Welcome',
+                path: '/common-functions/moment-object-format',
+                name: 'moment对象转时间字符串',
+                component: './CommonFunctions/MomentObjectFormat',
               },
             ],
           },
@@ -71,6 +69,7 @@ export default [
             icon: 'table',
             path: '/list',
             component: './ListTableList',
+            hideInMenu: true
           },
           {
             component: './GlobalComponents/404',

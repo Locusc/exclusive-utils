@@ -11,7 +11,7 @@ const Introduction = () => {
       bordered={false}
     >
       <div>
-        <Tag color={'rgb(140, 190, 60)'}>exclusive-utils</Tag>
+        <Tag color={'rgb(140, 190, 60)'}>exclusive-utils for you</Tag>
         <Divider />
         <ReactMarkDown 
           source={apiMd}

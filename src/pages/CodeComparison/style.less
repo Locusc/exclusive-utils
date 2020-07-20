@@ -1,0 +1,97 @@
+.mainCard {
+  min-height: '100%';
+  height: 470px;
+  & > div[class*="ant-card-body"] {
+    padding: 10px;
+  }
+}
+
+.codeDiffView {
+  & > div[class*="CodeMirror-merge"] {
+    height: 450px;
+    & > div[class*="CodeMirror-merge-pane CodeMirror-merge-editor"] {
+      width: 48%;
+      & > div[class*="CodeMirror cm-s-idea"] {
+        height: 447.5px;
+        div[class*='CodeMirror-merge-r-chunk']{
+          background: rgba(30,144,255,0.5);
+        }
+        div[class*='CodeMirror-merge-r-chunk-start']{
+          border-top: 1px solid #1e90ff;
+        }
+        div[class*='CodeMirror-merge-r-chunk-end']{
+          border-bottom: 1px solid dodgerblue;
+        }
+        div[class*='CodeMirror-merge-r-connect']{
+          fill: rgba(30,144,255,0.5); stroke: rgba(30,144,255,0.5); stroke-width: 1px;
+        }
+        & > div[class*="CodeMirror-scroll"] {
+          & > div[class*="CodeMirror-sizer"] {
+            & > div {
+              & > div[class*="CodeMirror-lines"] {
+                & > div {
+                  & > div[class*="CodeMirror-code"] {
+                    span {
+                      span[class*='CodeMirror-merge-r-inserted']{
+                        background-color: rgba(170, 218, 93, 0.5);
+                        background-image: none;
+                      }
+                    }
+                    // & > div[class*="CodeMirror-activeline"] {
+                    //   & > pre[class*=" CodeMirror-line "] {
+                        
+                    //   }
+                    // }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }  
+    }
+    & > div[class*="CodeMirror-merge-gap"] {
+      width: 4%;
+    }
+    & > div[class*="CodeMirror-merge-pane CodeMirror-merge-right"] {
+      width: 48%;
+      & > div[class*="CodeMirror cm-s-idea"] {
+        height: 447.5px;
+        div[class*='CodeMirror-merge-r-chunk']{
+          background: rgba(170, 218, 93, 0.5);
+        }
+        div[class*='CodeMirror-merge-r-chunk-start']{
+          border-top: 1px solid #1e90ff;
+        }
+        div[class*='CodeMirror-merge-r-chunk-end']{
+          border-bottom: 1px solid dodgerblue;
+        }
+        div[class*='CodeMirror-merge-r-connect']{
+          fill: rgba(170, 218, 93, 0.5); stroke: rgba(170, 218, 93, 0.5); stroke-width: 1px;
+        }
+        & > div[class*="CodeMirror-scroll"] {
+          & > div[class*="CodeMirror-sizer"] {
+            & > div {
+              & > div[class*="CodeMirror-lines"] {
+                & > div {
+                  & > div[class*="CodeMirror-code"] {
+                    span {
+                      span[class*='CodeMirror-merge-r-deleted']{
+                        background-color: rgba(30,144,255,0.5);
+                        background-image: none;
+                      }
+                    }
+                    // & > div[class*="CodeMirror-activeline"] {
+                    //   & > pre[class*=" CodeMirror-line "] {
+                    //   }
+                    // }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
