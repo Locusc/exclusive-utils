@@ -29,6 +29,12 @@ export default [
             component: './Introduction',
           },
           {
+            path: '/test',
+            name: '测试专用',
+            icon: 'edit',
+            component: './TestPage',
+          },
+          {
             path: '/json-parsing',
             name: 'JSON解析',
             icon: 'thunderbolt',

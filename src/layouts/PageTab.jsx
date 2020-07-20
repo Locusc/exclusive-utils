@@ -232,7 +232,6 @@ class App extends Component {
 
   render() {
     const { pages = [], activeKey, keys } = this.state;
-    console.log(pages)
     return (
       <div>
         <Tabs

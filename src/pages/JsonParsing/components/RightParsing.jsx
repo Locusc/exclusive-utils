@@ -1,38 +1,47 @@
-import React, { useEffect, useState } from 'react';
-import { Card, Input } from 'antd';
-import { LikeOutlined } from '@ant-design/icons';
+import React, { useEffect } from 'react';
+import { Card } from 'antd';
 import styles from '../style.less';
 import ReactJson from 'react-json-view';
 
-const { TextArea } = Input
+const ErrorMessageArea = (props) => {
+  return (
+    <Card
+      bordered={false}
+      className={styles.errorMessage}
+    >
+      {props.errorMessage}
+    </Card>
+  )
+}
 
 const RightParsing = (props) => {
 
-  useEffect(() => {
-  }, [])
-
-  const { textAreaValue } = props
-
+  const { 
+    textAreaValue,
+    errorMessage,
+    viewFlag
+   } = props
   return (
     <div
       className={styles.rightParsing}
     >
-      {/* {
-        !errorMessage ? (
+      {
+        viewFlag !== -1 ? (
+          viewFlag === 1 ? 
           <ReactJson 
             className={styles.reactJson}
-            // theme={'google'}
-            src={!errorMessage ? JSON.parse(textAreaValue) : null}
+            theme={'monokai'}
+            src={textAreaValue}
+          /> : 
+          <ErrorMessageArea 
+            errorMessage={null}
           />
         ) : (
-          <Card>{errorMessage}</Card>
-        )
-      } */}
-      <ReactJson 
-            className={styles.reactJson}
-            // theme={'google'}
-            src={JSON.parse(textAreaValue)}
+          <ErrorMessageArea 
+            errorMessage={errorMessage}
           />
+        )
+      }
     </div>
   )
 }
