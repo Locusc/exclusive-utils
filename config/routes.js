@@ -33,7 +33,7 @@ export default [
             name: '测试专用',
             icon: 'edit',
             component: './TestPage',
-            hideInMenu: true
+            // hideInMenu: true
           },
           {
             path: '/json-parsing',

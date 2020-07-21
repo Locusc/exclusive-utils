@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import jsonlint from 'jsonlint'
+import { Card } from 'antd';
 
 class TestPage extends Component {
 
@@ -20,7 +21,11 @@ class TestPage extends Component {
 
   render(){
     return (
-      <div>TestPage</div>
+      <Card
+        bordered={false}
+      >
+        <div>TestPage</div>
+      </Card>
     )
   }
 }

@@ -6,4 +6,4 @@
 5. __5.支持保存排序功能.__
 
 ### 2.查看代码
-[GitHub地址](www.locusc.cn)
+[GitHub地址](https://github.com/Locusc/exclusive-utils/blob/master/src/pages/CommonComponents/DraggableTags/index.jsx)
