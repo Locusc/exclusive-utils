@@ -61,8 +61,9 @@ const GlobalModel = {
         name = pathname.substr(pathname.lastIndexOf('/') + 1);
 
         // menu[getName(routes, 'menu', pathname)[0]] 含有多语言的一级路由名字匹配
+        const tabName = getName(routes, '', pathname)[0]
         const pageName =
-          getName(routes, '', pathname)[0] || title || name || '新标签页';
+          (String(tabName).indexOf('.') === -1 ? tabName : tabName.split('.')[1])  || title || name || '新标签页';
 
         setTimeout(() => {
           dispatch({ type: 'setCurrentPath', payload: { pathname, pageName: title || pageName } });

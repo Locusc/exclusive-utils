@@ -33,6 +33,7 @@ export default [
             name: '测试专用',
             icon: 'edit',
             component: './TestPage',
+            hideInMenu: true
           },
           {
             path: '/json-parsing',
@@ -47,13 +48,13 @@ export default [
             component: './CodeComparison',
           },
           {
-            path: '/admin',
+            path: '/common-functions',
             name: '常用函数',
             icon: 'tool',
             routes: [
               {
                 path: '/common-functions/moment-object-format',
-                name: 'moment对象转时间字符串',
+                name: 'Moment对象转时间字符串',
                 component: './CommonFunctions/MomentObjectFormat',
               },
             ],
@@ -62,7 +63,13 @@ export default [
             path: '/common-components',
             name: '常用组件',
             icon: 'cloud',
-            component: './CommonComponents',
+            routes: [
+              {
+                path: '/common-components/draggable-tags',
+                name: 'Tag可拖动组件',
+                component: './CommonComponents/DraggableTags',
+              },
+            ],
           },
           {
             name: '测试表格',

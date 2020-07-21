@@ -12,7 +12,8 @@ import { history, connect } from 'umi';
 import React, { Component } from 'react';
 import pageTabStyle from './PageTab.less';
 import { message } from 'antd';
-import { Tabs, Menu, Dropdown, Tooltip, Icon } from 'antd';
+import { Tabs, Menu, Dropdown, Tooltip } from 'antd';
+import { CloseCircleOutlined, ReloadOutlined } from '@ant-design/icons';
 
 const { TabPane } = Tabs;
 const TABS_NOT_TIPS = 'TABS_NOT_TIPS';
@@ -67,7 +68,7 @@ const menu = obj => {
         }}
       >
         <span title={`刷新-${title}`}>
-          <Icon type="reload" />
+          <ReloadOutlined />
           刷新当前页面
         </span>
       </Menu.Item>
@@ -79,7 +80,7 @@ const menu = obj => {
         }}
       >
         <span title={'强制刷新浏览器'}>
-          <Icon type="reload" />
+          <ReloadOutlined />
           刷新浏览器
         </span>
       </Menu.Item>
@@ -92,7 +93,7 @@ const menu = obj => {
           closeOhterTabs(key);
         }}
       >
-        <Icon type="close-circle" />
+        <CloseCircleOutlined />
         关闭其他标签页
       </Menu.Item>
       <Menu.Item
@@ -103,7 +104,7 @@ const menu = obj => {
           closeOhterTabs(key, 'right');
         }}
       >
-        <Icon type="close-circle" />
+        <CloseCircleOutlined />
         关闭右侧标签页
       </Menu.Item>
       <Menu.Item
@@ -114,7 +115,7 @@ const menu = obj => {
           closeOhterTabs(key, 'left');
         }}
       >
-        <Icon type="close-circle" />
+        <CloseCircleOutlined />
         关闭左侧标签页
       </Menu.Item>
     </Menu>

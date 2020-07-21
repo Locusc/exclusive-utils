@@ -74,3 +74,17 @@ export const store = {
     }
   },
 };
+
+export const filterObject = (obj) => {
+  if (!(typeof obj == 'object')) {
+    return;
+  }
+
+  for ( const key in obj) {
+    if (obj.hasOwnProperty(key)
+      && (obj[key] == null || obj[key] == undefined || obj[key] === '')) {
+      delete obj[key];
+    }
+  }
+  return obj;
+}
