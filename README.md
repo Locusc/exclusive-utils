@@ -1,47 +1,19 @@
 # exclusive-utils
+基于Ant Design Pro的常用Utils汇总项目
 
-常用Utils汇总项目
-
-## Environment Prepare
-
-Install `node_modules`:
-
+## 项目使用
 ```bash
 npm install
-```
-
-or
-
-```bash
-yarn
-```
-
-### Start project
-
-```bash
 npm start
 ```
 
-### Build project
+## 项目包含
+1. JSON解析
+2. 代码对比
+3. 编码/加密
+4. 常用组件
+5. 常用函数
+6. ...后续更新
 
-```bash
-npm run build
-```
-
-### Check code style
-
-```bash
-npm run lint
-```
-
-You can also use script to auto fix some lint error:
-
-```bash
-npm run lint:fix
-```
-
-### Test code
-
-```bash
-npm test
-```
+## 在线使用
+[访问地址](https://www.locusc.cn)
