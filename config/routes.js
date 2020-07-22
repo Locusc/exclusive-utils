@@ -33,7 +33,7 @@ export default [
             name: '测试专用',
             icon: 'edit',
             component: './TestPage',
-            // hideInMenu: true
+            hideInMenu: true
           },
           {
             path: '/json-parsing',
@@ -46,6 +46,18 @@ export default [
             name: '代码对比',
             icon: 'switcher',
             component: './CodeComparison',
+          },
+          {
+            path: '/encoding-encrypting',
+            name: '编码/加密',
+            icon: 'retweet',
+            routes: [
+              {
+                path: '/encoding-encrypting/encoding/url-encoding',
+                name: 'URL编码',
+                component: './EncodingEncrypting/Encoding/UrlEncoding',
+              },
+            ],
           },
           {
             path: '/common-functions',
