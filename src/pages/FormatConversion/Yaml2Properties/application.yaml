@@ -1,0 +1,7 @@
+gad:
+  api:
+    client:
+      access-key: locusc
+      domain-name: locusc
+      protocol: locusc
+      secret-key: locusc

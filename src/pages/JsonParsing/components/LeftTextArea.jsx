@@ -45,17 +45,17 @@ const LeftTextArea = (props) => {
     setErrorMessage,
     setViewFlag
   } = props
+
   return (
     <div>
       <TextArea
         ref={textAreaRef}
         className={styles.textArea}
-        style={{ height: 450 }}
+        style={{ height: '100%', minHeight: 'calc(100vh - 128px)' }}
         placeholder={''}
-        min-height={'100%'}
         onChange={handleTextAreaChange}
         defaultValue={defaultJson}
-      />  
+      />
     </div>
   )
 }

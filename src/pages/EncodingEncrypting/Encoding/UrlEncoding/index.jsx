@@ -11,19 +11,22 @@ const UrlEncoding = () => {
     { label: 'encodeURIComponent', value: 'encodeURIComponent' },
   ];
 
+  // 编码类型
   const [encodeOption, setEncodeOption] = useState('encodeURIComponent')
+  // 左文本需要编码的值
   const [leftEncodeValue, setLeftEncodeValue] = useState('https://www.locusc.cn/?scope=view')
+  // 右文本需要解码的值
   const [rightDecodeValue, setRightDecodeValue] = useState('')
 
   const handleEncodeOptionChange = (e) => {
     setEncodeOption(e.target.value)
   }
 
-  const hanldeChangeDecodeValue = (e) => {
+  const handleChangeDecodeValue = (e) => {
     setRightDecodeValue(e.target.value)
   }
 
-  const hanldeChangeEncodeValue = (e) => {
+  const handleChangeEncodeValue = (e) => {
     setLeftEncodeValue(e.target.value)
   }
 
@@ -75,10 +78,10 @@ const UrlEncoding = () => {
       />
       <Row gutter={8} justify="space-around" align="middle" >
         <Col span={11}>
-           <TextArea 
-              autoSize={{ minRows: 18, maxRows: 18 }}
+           <TextArea
+              style={{ minHeight: 'calc(100vh - 169.9px)' }}
               value={leftEncodeValue}
-              onChange={hanldeChangeEncodeValue}
+              onChange={handleChangeEncodeValue}
             />
         </Col>
         <Col span={2}>
@@ -108,10 +111,10 @@ const UrlEncoding = () => {
             </div>
         </Col>
         <Col span={11}>
-          <TextArea 
-            autoSize={{ minRows: 18, maxRows: 18 }}
+          <TextArea
+            style={{ minHeight: 'calc(100vh - 169.99px)' }}
             value={rightDecodeValue}
-            onChange={hanldeChangeDecodeValue}
+            onChange={handleChangeDecodeValue}
           />
         </Col>
       </Row>

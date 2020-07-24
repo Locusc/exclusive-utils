@@ -1,6 +1,5 @@
 .mainCard {
-  min-height: '100%';
-  height: 470px;
+  height: 100%;
   & > div[class*="ant-card-body"] {
     padding: 10px;
   }
@@ -8,11 +7,11 @@
 
 .codeDiffView {
   & > div[class*="CodeMirror-merge"] {
-    height: 450px;
+    min-height: calc(100vh - 128px);
     & > div[class*="CodeMirror-merge-pane CodeMirror-merge-editor"] {
       width: 48%;
       & > div[class*="CodeMirror cm-s-idea"] {
-        height: 447.5px;
+        min-height: calc(100vh - 130.5px);
         div[class*='CodeMirror-merge-r-chunk']{
           background: rgba(30,144,255,0.5);
         }
@@ -56,7 +55,7 @@
     & > div[class*="CodeMirror-merge-pane CodeMirror-merge-right"] {
       width: 48%;
       & > div[class*="CodeMirror cm-s-idea"] {
-        height: 447.5px;
+        min-height: calc(100vh - 130.5px);
         div[class*='CodeMirror-merge-r-chunk']{
           background: rgba(170, 218, 93, 0.5);
         }

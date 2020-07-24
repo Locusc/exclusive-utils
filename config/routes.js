@@ -54,8 +54,20 @@ export default [
             routes: [
               {
                 path: '/encoding-encrypting/encoding/url-encoding',
-                name: 'URL编码',
+                name: 'URL编码/解码',
                 component: './EncodingEncrypting/Encoding/UrlEncoding',
+              },
+            ],
+          },
+          {
+            path: '/format-conversion',
+            name: '格式转换',
+            icon: 'arrows-alt',
+            routes: [
+              {
+                path: '/format-conversion/yaml-properties',
+                name: 'yaml/properties转换',
+                component: './FormatConversion/Yaml2Properties',
               },
             ],
           },

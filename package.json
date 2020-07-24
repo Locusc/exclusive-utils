@@ -64,6 +64,7 @@
     "moment": "^2.25.3",
     "omit.js": "^2.0.2",
     "path-to-regexp": "2.4.0",
+    "properties": "^1.2.1",
     "qs": "^6.9.0",
     "react": "^16.8.6",
     "react-codemirror2": "^7.2.1",
@@ -112,7 +113,8 @@
     "prettier": "^2.0.1",
     "pro-download": "1.0.1",
     "puppeteer-core": "^5.0.0",
-    "stylelint": "^13.0.0"
+    "stylelint": "^13.0.0",
+    "yaml-lint": "^1.2.4"
   },
   "engines": {
     "node": ">=10.0.0"
