@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { PageHeaderWrapper, FooterToolbar } from '@ant-design/pro-layout';
 import { Card, Row, Col, Input } from 'antd';
 import styles from './style.less';
 import LeftTextArea from './components/LeftTextArea';

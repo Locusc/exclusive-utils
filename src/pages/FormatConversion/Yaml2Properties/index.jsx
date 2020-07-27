@@ -4,8 +4,6 @@ import TextArea from 'antd/lib/input/TextArea';
 import styles from './style.less';
 import { ArrowLeftOutlined, ArrowRightOutlined, ClearOutlined } from '@ant-design/icons';
 import request from '@/utils/request';
-import YamlLint from 'yaml-lint';
-import properties from 'properties';
 
 const Yaml2Properties = () => {
 
