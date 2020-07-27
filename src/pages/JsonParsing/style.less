@@ -12,8 +12,10 @@
 .rightParsing {
   height: 100%;
   overflow-y: auto;
+  background-color: rgb(39, 40, 34);
   & > div[class*="react-json-view"] {
-    height: 100%;
+    max-height: calc(100vh - 128px);
+    min-height: calc(100vh - 128px);
   }
 }
 
