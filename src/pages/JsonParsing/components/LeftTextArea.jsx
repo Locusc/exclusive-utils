@@ -22,11 +22,12 @@ const LeftTextArea = (props) => {
         setViewFlag(0)
       } else {
         try {
-          if (textAreaValue.substr(0,1) === '<' && textAreaValue.substr(-1,1) === '>') {
-            const parseXmlValue = fastXmlParser.parse(textAreaValue)
+          const trimTextAreaValue = textAreaValue.trim()
+          if (trimTextAreaValue.substr(0,1) === '<' && trimTextAreaValue.substr(-1,1) === '>') {
+            const parseXmlValue = fastXmlParser.parse(trimTextAreaValue)
             setTextAreaValue(parseXmlValue)
           } else {
-            const parseJsonValue = jsonlint.parse(textAreaValue)
+            const parseJsonValue = jsonlint.parse(trimTextAreaValue)
             setTextAreaValue(parseJsonValue)
           }
           setViewFlag(1)
@@ -39,7 +40,7 @@ const LeftTextArea = (props) => {
     textAreaTimeout = setTimeout(handleJsonParsing, 300);
   }
 
-  const { 
+  const {
     setTextAreaValue,
     defaultJson,
     setErrorMessage,

@@ -16,7 +16,7 @@ const ErrorMessageArea = (props) => {
 
 const RightParsing = (props) => {
 
-  const { 
+  const {
     textAreaValue,
     errorMessage,
     viewFlag
@@ -27,17 +27,17 @@ const RightParsing = (props) => {
     >
       {
         viewFlag !== -1 ? (
-          viewFlag === 1 ? 
-          <ReactJson 
+          viewFlag === 1 ?
+          <ReactJson
             className={styles.reactJson}
             theme={'monokai'}
             src={textAreaValue}
-          /> : 
-          <ErrorMessageArea 
+          /> :
+          <ErrorMessageArea
             errorMessage={null}
           />
         ) : (
-          <ErrorMessageArea 
+          <ErrorMessageArea
             errorMessage={errorMessage}
           />
         )
